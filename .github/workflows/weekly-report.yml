@@ -1,0 +1,61 @@
+name: 営業週報 自動生成・配信
+
+on:
+  # 毎週金曜 17:00（JST = UTC 08:00）に自動実行
+  schedule:
+    - cron: '0 8 * * 5'
+
+  # 手動実行も可能（GitHub の Actions タブから「Run workflow」）
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'ドライラン（LINE送信しない）'
+        required: false
+        default: 'false'
+        type: boolean
+
+jobs:
+  generate-and-notify:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write   # GitHub Pages へのプッシュに必要
+
+    steps:
+      # 1. リポジトリをチェックアウト
+      - name: リポジトリをチェックアウト
+        uses: actions/checkout@v4
+
+      # 2. Node.js をセットアップ
+      - name: Node.js セットアップ
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      # 3. 依存パッケージをインストール
+      - name: 依存パッケージインストール
+        run: npm ci
+
+      # 4. 週報を生成・LINE通知
+      - name: 週報生成・LINE通知
+        env:
+          SPREADSHEET_ID:          ${{ secrets.SPREADSHEET_ID }}
+          GOOGLE_CREDENTIALS_JSON: ${{ secrets.GOOGLE_CREDENTIALS_JSON }}
+          LINE_CHANNEL_TOKEN:      ${{ secrets.LINE_CHANNEL_TOKEN }}
+          LINE_USER_IDS:           ${{ secrets.LINE_USER_IDS }}
+          REPORT_URL:              https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/weekly-report/
+        run: |
+          if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then
+            node scripts/run.js --dry-run
+          else
+            node scripts/run.js
+          fi
+
+      # 5. 生成した HTML を GitHub Pages 用ブランチにプッシュ
+      - name: GitHub Pages にデプロイ
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir:  ./output/weekly-report
+          destination_dir: weekly-report
+          keep_files:   true   # 過去の週報を残す

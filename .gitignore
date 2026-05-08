@@ -1,2 +1,3 @@
-output/*.html
-deploy-history.log
+node_modules/
+.env
+*.json.key

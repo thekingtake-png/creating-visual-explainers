@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+  <meta name="googlebot" content="noindex, nofollow">
+  <title>たけちゃんの自己紹介</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            forest: { 50:'#f0faf4', 100:'#dcf5e7', 200:'#bbe9d0', 300:'#86d5ad', 400:'#4dba84', 500:'#28a060', 600:'#1a8a4d', 700:'#166f3e', 800:'#145833', 900:'#11472a' },
+            sky2:   { 50:'#f0f9ff', 100:'#e0f2fe', 200:'#bae6fd', 300:'#7dd3fc', 400:'#38bdf8', 500:'#0ea5e9' },
+            earth:  { 50:'#fdf8f0', 100:'#faecd8', 200:'#f5d9a8', 300:'#efc072', 400:'#e8a33e', 500:'#d4891e', 600:'#b86e10' },
+          },
+          fontFamily: {
+            sans: ['"Noto Sans JP"', '"Hiragino Sans"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* 木漏れ日のような背景パターン */
+    .dappled {
+      background-color: #f0faf4;
+      background-image:
+        radial-gradient(ellipse 80px 60px at 10% 20%, rgba(40,160,96,.06) 0%, transparent 70%),
+        radial-gradient(ellipse 120px 90px at 80% 10%, rgba(14,165,233,.05) 0%, transparent 70%),
+        radial-gradient(ellipse 60px 80px at 50% 60%, rgba(40,160,96,.05) 0%, transparent 70%),
+        radial-gradient(ellipse 100px 70px at 90% 70%, rgba(212,137,30,.04) 0%, transparent 70%),
+        radial-gradient(ellipse 90px 50px at 20% 85%, rgba(14,165,233,.04) 0%, transparent 70%);
+    }
+    /* 葉脈のような細い装飾線 */
+    .vein-line {
+      position: relative;
+    }
+    .vein-line::before {
+      content: '';
+      display: block;
+      width: 2px;
+      height: 100%;
+      position: absolute;
+      left: 20px;
+      top: 0;
+      background: linear-gradient(to bottom, #86d5ad, transparent);
+      border-radius: 1px;
+    }
+    @media print {
+      .no-print { display: none !important; }
+    }
+  </style>
+</head>
+<body class="dappled min-h-screen" style="font-family:'Noto Sans JP',sans-serif; color:#1a3a28;">
+
+  <!-- ====================================================== -->
+  <!--  HERO                                                  -->
+  <!-- ====================================================== -->
+  <header class="relative overflow-hidden">
+    <!-- 背景の大きな葉っぱシルエット（SVG） -->
+    <svg class="absolute top-0 right-0 w-64 md:w-96 opacity-10 text-forest-400 pointer-events-none" viewBox="0 0 400 400" fill="currentColor">
+      <path d="M380 20 C380 20 280 60 200 160 C120 260 60 380 20 380 C20 380 80 280 120 200 C160 120 220 60 380 20Z"/>
+    </svg>
+    <svg class="absolute bottom-0 left-0 w-48 md:w-72 opacity-10 text-sky2-400 pointer-events-none" viewBox="0 0 300 300" fill="currentColor">
+      <path d="M10 290 C10 290 80 200 150 150 C220 100 290 40 290 10 C290 10 230 100 180 160 C130 220 60 270 10 290Z"/>
+    </svg>
+
+    <div class="relative max-w-2xl mx-auto px-6 pt-16 pb-12 text-center">
+      <!-- アバターアイコン -->
+      <div class="relative inline-block mb-6">
+        <div class="w-28 h-28 rounded-full bg-gradient-to-br from-forest-300 to-forest-500 flex items-center justify-center mx-auto shadow-lg">
+          <svg viewBox="0 0 60 60" class="w-14 h-14 fill-white" xmlns="http://www.w3.org/2000/svg">
+            <!-- 木のシルエット（人 + 葉） -->
+            <circle cx="30" cy="18" r="12" fill="rgba(255,255,255,0.9)"/>
+            <rect x="26" y="30" width="8" height="16" rx="2" fill="rgba(255,255,255,0.9)"/>
+            <ellipse cx="30" cy="13" rx="10" ry="10" fill="rgba(255,255,255,0.4)"/>
+          </svg>
+        </div>
+        <!-- 小さい葉デコ -->
+        <div class="absolute -top-1 -right-1 w-7 h-7 bg-earth-300 rounded-full flex items-center justify-center shadow">
+          <svg viewBox="0 0 24 24" class="w-4 h-4 fill-earth-700"><path d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22l1-2.3A4.49 4.49 0 008 20C19 20 22 3 22 3c-1 2-8 5.5-10 7.5C9 12.5 9 14 9 14s-1.5-1-1.5-3C7.5 7 11.5 6 17 8z"/></svg>
+        </div>
+      </div>
+
+      <p class="text-forest-600 text-sm font-medium tracking-widest mb-2">はじめまして</p>
+      <h1 class="text-5xl md:text-6xl font-black text-forest-800 mb-3" style="letter-spacing:-0.03em;">
+        たけちゃん
+      </h1>
+      <p class="text-forest-600 font-medium mb-6">外構・エクステリアの設計施工</p>
+
+      <!-- タグ -->
+      <div class="flex flex-wrap justify-center gap-2">
+        <span class="inline-flex items-center gap-1.5 bg-white/70 backdrop-blur text-forest-700 text-xs font-medium px-3 py-1.5 rounded-full border border-forest-200 shadow-sm">
+          <svg viewBox="0 0 24 24" class="w-3.5 h-3.5 fill-forest-500"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22" style="fill:none;stroke:#28a060;stroke-width:2"/></svg>
+          設計・施工
+        </span>
+        <span class="inline-flex items-center gap-1.5 bg-white/70 backdrop-blur text-forest-700 text-xs font-medium px-3 py-1.5 rounded-full border border-forest-200 shadow-sm">
+          <svg viewBox="0 0 24 24" class="w-3.5 h-3.5 fill-earth-500"><path d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22l1-2.3A4.49 4.49 0 008 20C19 20 22 3 22 3c-1 2-8 5.5-10 7.5"/></svg>
+          庭いじり好き
+        </span>
+        <span class="inline-flex items-center gap-1.5 bg-white/70 backdrop-blur text-sky2-700 text-xs font-medium px-3 py-1.5 rounded-full border border-sky2-200 shadow-sm">
+          <svg viewBox="0 0 24 24" class="w-3.5 h-3.5" fill="none" stroke="#0ea5e9" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          AI Driven School
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-2xl mx-auto px-6 pb-20">
+
+    <!-- ====================================================== -->
+    <!--  SECTION 1: 仕事                                        -->
+    <!-- ====================================================== -->
+    <section class="mb-16">
+
+      <!-- セクションラベル -->
+      <div class="flex items-center gap-3 mb-6">
+        <div class="w-8 h-8 rounded-full bg-earth-200 flex items-center justify-center flex-shrink-0">
+          <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="#b86e10" stroke-width="2" stroke-linecap="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+        </div>
+        <h2 class="text-lg font-bold text-forest-800">仕事のこと</h2>
+        <div class="flex-1 border-t border-forest-200/70"></div>
+      </div>
+
+      <!-- メインカード -->
+      <div class="bg-white/80 backdrop-blur rounded-3xl p-6 md:p-8 shadow-sm border border-forest-100 mb-4">
+        <div class="flex items-start gap-4 mb-6">
+          <div class="w-12 h-12 rounded-2xl bg-forest-100 flex items-center justify-center flex-shrink-0">
+            <svg viewBox="0 0 24 24" class="w-6 h-6" fill="none" stroke="#1a8a4d" stroke-width="2" stroke-linecap="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-black text-forest-800 mb-1">外構・エクステリアの設計施工</h3>
+            <p class="text-forest-600 text-sm leading-relaxed">
+              フェンス・門扉・アプローチ・駐車スペース・植栽など、<br>お家の「外側の顔」をまるごとデザインして形にしています。
+            </p>
+          </div>
+        </div>
+
+        <!-- 仕事の流れ（横ライン） -->
+        <div class="relative">
+          <div class="absolute top-5 left-5 right-5 h-0.5 bg-gradient-to-r from-forest-200 via-forest-300 to-forest-200 hidden md:block"></div>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+            <div class="flex flex-col items-center text-center">
+              <div class="w-10 h-10 rounded-full bg-forest-100 border-2 border-forest-300 flex items-center justify-center mb-2 relative z-10">
+                <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="#28a060" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+              </div>
+              <span class="text-xs font-bold text-forest-700">ヒアリング</span>
+              <span class="text-[11px] text-forest-500 mt-0.5">理想を聞く</span>
+            </div>
+            <div class="flex flex-col items-center text-center">
+              <div class="w-10 h-10 rounded-full bg-forest-100 border-2 border-forest-300 flex items-center justify-center mb-2 relative z-10">
+                <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="#28a060" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+              </div>
+              <span class="text-xs font-bold text-forest-700">設計・提案</span>
+              <span class="text-[11px] text-forest-500 mt-0.5">図面に落とす</span>
+            </div>
+            <div class="flex flex-col items-center text-center">
+              <div class="w-10 h-10 rounded-full bg-forest-100 border-2 border-forest-300 flex items-center justify-center mb-2 relative z-10">
+                <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="#28a060" stroke-width="2"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+              </div>
+              <span class="text-xs font-bold text-forest-700">施工</span>
+              <span class="text-[11px] text-forest-500 mt-0.5">手で作り上げる</span>
+            </div>
+            <div class="flex flex-col items-center text-center">
+              <div class="w-10 h-10 rounded-full bg-earth-200 border-2 border-earth-400 flex items-center justify-center mb-2 relative z-10">
+                <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="#b86e10" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              </div>
+              <span class="text-xs font-bold text-earth-700">引き渡し</span>
+              <span class="text-[11px] text-earth-600 mt-0.5">笑顔で完了</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- こだわりひとこと -->
+      <div class="bg-forest-700/5 border-l-4 border-forest-400 rounded-r-2xl px-5 py-4">
+        <p class="text-forest-700 text-sm leading-relaxed">
+          設計者でもあり施工者でもある。だからアイデアを<strong class="text-forest-800">直接、自分の手で形にできる</strong>のが一番好きなところ。
+        </p>
+      </div>
+    </section>
+
+
+    <!-- ====================================================== -->
+    <!--  SECTION 2: 趣味                                        -->
+    <!-- ====================================================== -->
+    <section class="mb-16">
+
+      <div class="flex items-center gap-3 mb-6">
+        <div class="w-8 h-8 rounded-full bg-forest-200 flex items-center justify-center flex-shrink-0">
+          <svg viewBox="0 0 24 24" class="w-4 h-4 fill-forest-600"><path d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22l1-2.3A4.49 4.49 0 008 20C19 20 22 3 22 3c-1 2-8 5.5-10 7.5"/></svg>
+        </div>
+        <h2 class="text-lg font-bold text-forest-800">趣味のこと</h2>
+        <div class="flex-1 border-t border-forest-200/70"></div>
+      </div>
+
+      <div class="bg-gradient-to-br from-forest-50 to-sky2-50 rounded-3xl border border-forest-100 overflow-hidden shadow-sm">
+        <!-- 上部イメージ -->
+        <div class="bg-gradient-to-b from-sky2-100 to-forest-100 px-8 pt-8 pb-0 flex justify-center">
+          <!-- ミニ庭のイラスト（SVG） -->
+          <svg viewBox="0 0 320 140" class="w-full max-w-xs" xmlns="http://www.w3.org/2000/svg">
+            <!-- 空 -->
+            <rect width="320" height="140" rx="12" fill="url(#sky)" opacity="0.5"/>
+            <defs>
+              <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#bae6fd"/>
+                <stop offset="100%" stop-color="#dcf5e7"/>
+              </linearGradient>
+            </defs>
+            <!-- 雲 -->
+            <ellipse cx="60" cy="30" rx="28" ry="12" fill="white" opacity="0.8"/>
+            <ellipse cx="80" cy="24" rx="20" ry="14" fill="white" opacity="0.8"/>
+            <ellipse cx="45" cy="26" rx="15" ry="10" fill="white" opacity="0.8"/>
+            <ellipse cx="240" cy="20" rx="22" ry="10" fill="white" opacity="0.7"/>
+            <ellipse cx="258" cy="15" rx="16" ry="12" fill="white" opacity="0.7"/>
+            <!-- 地面 -->
+            <rect x="0" y="100" width="320" height="40" rx="0" fill="#86d5ad" opacity="0.5"/>
+            <ellipse cx="160" cy="100" rx="160" ry="8" fill="#4dba84" opacity="0.3"/>
+            <!-- 左の木 -->
+            <rect x="48" y="70" width="6" height="32" rx="2" fill="#b86e10"/>
+            <ellipse cx="51" cy="60" rx="20" ry="22" fill="#28a060" opacity="0.9"/>
+            <ellipse cx="43" cy="52" rx="14" ry="16" fill="#1a8a4d" opacity="0.7"/>
+            <!-- 右の木 -->
+            <rect x="258" y="65" width="6" height="37" rx="2" fill="#b86e10"/>
+            <ellipse cx="261" cy="54" rx="22" ry="24" fill="#4dba84" opacity="0.9"/>
+            <ellipse cx="253" cy="46" rx="16" ry="18" fill="#28a060" opacity="0.7"/>
+            <!-- 中央の低い植栽 -->
+            <ellipse cx="130" cy="96" rx="24" ry="12" fill="#28a060" opacity="0.8"/>
+            <ellipse cx="160" cy="98" rx="18" ry="10" fill="#4dba84" opacity="0.8"/>
+            <ellipse cx="190" cy="96" rx="22" ry="11" fill="#28a060" opacity="0.7"/>
+            <!-- 小さな花 -->
+            <circle cx="110" cy="92" r="4" fill="#f9a8d4" opacity="0.9"/>
+            <circle cx="210" cy="91" r="3.5" fill="#fde68a" opacity="0.9"/>
+            <circle cx="155" cy="88" r="3" fill="#fca5a5" opacity="0.9"/>
+            <!-- 人のシルエット（たけちゃん） -->
+            <circle cx="160" cy="72" r="7" fill="#166f3e" opacity="0.85"/>
+            <rect x="156" y="79" width="8" height="14" rx="2" fill="#166f3e" opacity="0.85"/>
+            <!-- じょうろ -->
+            <rect x="164" y="84" width="10" height="6" rx="2" fill="#b86e10" opacity="0.9"/>
+            <path d="M174 87 Q180 83 178 95" stroke="#0ea5e9" stroke-width="1.5" fill="none" opacity="0.7"/>
+            <circle cx="178" cy="95" r="1.5" fill="#0ea5e9" opacity="0.6"/>
+            <circle cx="176" cy="97" r="1" fill="#0ea5e9" opacity="0.5"/>
+            <circle cx="180" cy="96" r="1" fill="#0ea5e9" opacity="0.5"/>
+          </svg>
+        </div>
+
+        <!-- テキスト -->
+        <div class="px-6 md:px-8 py-6">
+          <h3 class="text-xl font-black text-forest-800 mb-3">庭いじり</h3>
+          <p class="text-forest-700 text-sm leading-relaxed mb-4">
+            仕事でも庭を作り、休日も庭をいじる。「好きを仕事にした人」の典型かもしれない。プロの目線があるぶん、自宅の庭は<strong class="text-forest-800">最高の実験場</strong>にもなっている。
+          </p>
+
+          <!-- キーワード -->
+          <div class="flex flex-wrap gap-2">
+            <span class="text-[12px] bg-white/80 text-forest-700 border border-forest-200 rounded-full px-3 py-1">土質改良</span>
+            <span class="text-[12px] bg-white/80 text-forest-700 border border-forest-200 rounded-full px-3 py-1">剪定・植え替え</span>
+            <span class="text-[12px] bg-white/80 text-forest-700 border border-forest-200 rounded-full px-3 py-1">季節の植栽</span>
+            <span class="text-[12px] bg-white/80 text-forest-700 border border-forest-200 rounded-full px-3 py-1">新素材の試し張り</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ====================================================== -->
+    <!--  SECTION 3: AI Driven School                           -->
+    <!-- ====================================================== -->
+    <section class="mb-16">
+
+      <div class="flex items-center gap-3 mb-6">
+        <div class="w-8 h-8 rounded-full bg-sky2-100 flex items-center justify-center flex-shrink-0">
+          <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="#0ea5e9" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+        </div>
+        <h2 class="text-lg font-bold text-forest-800">AI Driven School での意気込み</h2>
+        <div class="flex-1 border-t border-forest-200/70"></div>
+      </div>
+
+      <p class="text-forest-700 text-sm leading-relaxed mb-5 pl-1">
+        現場の職人仕事とAIは、一見遠い存在に見えるかもしれない。でも、外構の仕事にこそAIが役立てる場面がたくさんある。特に力を入れたいのがこの3つ。
+      </p>
+
+      <!-- 3カード -->
+      <div class="space-y-3">
+
+        <!-- 集客 -->
+        <div class="bg-white/80 backdrop-blur rounded-2xl border border-sky2-100 p-5 flex gap-4 shadow-sm">
+          <div class="flex-shrink-0">
+            <div class="w-11 h-11 rounded-xl bg-sky2-100 flex items-center justify-center">
+              <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="#0ea5e9" stroke-width="2" stroke-linecap="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+            </div>
+          </div>
+          <div>
+            <div class="flex items-center gap-2 mb-1.5">
+              <span class="text-[10px] font-bold text-sky2-500 tracking-widest">01</span>
+              <h3 class="font-bold text-forest-800">集客</h3>
+            </div>
+            <p class="text-forest-600 text-sm leading-relaxed">
+              「良い仕事をすれば口コミで広がる」だけでは限界がある時代。AIを使ってSNSや検索での発信を強化し、<strong class="text-forest-800">会ったことがないお客様にも届く仕組み</strong>を作りたい。
+            </p>
+          </div>
+        </div>
+
+        <!-- 提案 -->
+        <div class="bg-white/80 backdrop-blur rounded-2xl border border-forest-100 p-5 flex gap-4 shadow-sm">
+          <div class="flex-shrink-0">
+            <div class="w-11 h-11 rounded-xl bg-forest-100 flex items-center justify-center">
+              <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="#28a060" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            </div>
+          </div>
+          <div>
+            <div class="flex items-center gap-2 mb-1.5">
+              <span class="text-[10px] font-bold text-forest-500 tracking-widest">02</span>
+              <h3 class="font-bold text-forest-800">提案</h3>
+            </div>
+            <p class="text-forest-600 text-sm leading-relaxed">
+              ヒアリングから提案書まで数日かかっていた。AIで<strong class="text-forest-800">「ヒアリング当日にラフ案を出せる」</strong>スピードを手に入れ、お客様に早く「いいね」をもらえるようにしたい。
+            </p>
+          </div>
+        </div>
+
+        <!-- 業務効率化 -->
+        <div class="bg-white/80 backdrop-blur rounded-2xl border border-earth-100 p-5 flex gap-4 shadow-sm">
+          <div class="flex-shrink-0">
+            <div class="w-11 h-11 rounded-xl bg-earth-100 flex items-center justify-center">
+              <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="#d4891e" stroke-width="2" stroke-linecap="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            </div>
+          </div>
+          <div>
+            <div class="flex items-center gap-2 mb-1.5">
+              <span class="text-[10px] font-bold text-earth-500 tracking-widest">03</span>
+              <h3 class="font-bold text-forest-800">業務効率化</h3>
+            </div>
+            <p class="text-forest-600 text-sm leading-relaxed">
+              現場が終わった後の見積書・メール・スケジュール調整が地味に重い。AIに任せられる部分を増やして、<strong class="text-forest-800">「現場とお客様」に集中する時間</strong>を取り戻したい。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ====================================================== -->
+    <!--  CLOSING                                               -->
+    <!-- ====================================================== -->
+    <section>
+      <div class="relative bg-gradient-to-br from-forest-600 to-forest-800 rounded-3xl px-8 py-10 text-center overflow-hidden shadow-md">
+        <!-- 背景に葉っぱ -->
+        <svg class="absolute top-0 right-0 w-40 opacity-10 text-white pointer-events-none" viewBox="0 0 200 200" fill="currentColor">
+          <path d="M190 10 C190 10 140 50 100 100 C60 150 20 190 10 190 C10 190 60 140 90 100 C120 60 160 20 190 10Z"/>
+        </svg>
+        <svg class="absolute bottom-0 left-0 w-32 opacity-10 text-white pointer-events-none" viewBox="0 0 200 200" fill="currentColor">
+          <path d="M10 190 C10 190 60 140 100 100 C140 60 190 20 190 10 C190 10 140 60 110 100 C80 140 30 180 10 190Z"/>
+        </svg>
+
+        <div class="relative">
+          <p class="text-white/70 text-xs tracking-widest mb-3">CLOSING MESSAGE</p>
+          <p class="text-white text-xl font-black mb-4 leading-relaxed">
+            「現場のプロ」が<br>「AIを使いこなすプロ」にもなる
+          </p>
+          <p class="text-forest-200 text-sm leading-relaxed max-w-sm mx-auto">
+            職人の技術とAIの力を組み合わせて、もっと多くのお客様に、もっと良い外構を届けたい。<br>よろしくお願いします！
+          </p>
+
+          <!-- サイン風 -->
+          <div class="mt-6 inline-block border-t border-forest-400 pt-3">
+            <span class="text-white font-bold tracking-wide">たけちゃん</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="text-center pb-10 pt-2">
+    <p class="text-forest-400 text-xs">AI-Driven School の図解ツールで作成</p>
+  </footer>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>lucide.createIcons();</script>
+</body>
+</html>

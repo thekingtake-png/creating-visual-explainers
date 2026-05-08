@@ -1,0 +1,14 @@
+{
+  "name": "sales-weekly-report",
+  "version": "1.0.0",
+  "description": "営業週報の自動生成・LINE通知システム",
+  "main": "scripts/run.js",
+  "scripts": {
+    "start": "node scripts/run.js",
+    "dev": "node scripts/run.js --dry-run"
+  },
+  "dependencies": {
+    "googleapis": "^144.0.0",
+    "axios": "^1.7.0"
+  }
+}
