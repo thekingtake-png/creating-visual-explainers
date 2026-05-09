@@ -90,7 +90,7 @@ async function fetchFromSheets(spreadsheetId, credentialsJson) {
   // 「週報データ」シートのA1:H100を取得
   const response = await sheets.spreadsheets.values.get({
     spreadsheetId,
-    range: '週報データ!A1:H100',
+    range: '案件データ!A1:H100',
   });
 
   const rows = response.data.values || [];
