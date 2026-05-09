@@ -73,7 +73,7 @@ function generateHtml(data) {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>営業週報 ${week} | グリーンエクステリア</title>
+  <title>営業週報 ${week} | Takezo Farm</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -99,7 +99,7 @@ function generateHtml(data) {
           <i data-lucide="tree-pine" class="w-5 h-5 text-green-300" aria-hidden="true"></i>
         </div>
         <div>
-          <h1 class="text-base font-bold leading-tight">グリーンエクステリア株式会社</h1>
+          <h1 class="text-base font-bold leading-tight">Takezo Farm</h1>
           <p class="text-green-300 text-xs">営業部 週報ダッシュボード</p>
         </div>
       </div>
@@ -234,7 +234,7 @@ function generateHtml(data) {
     <div class="max-w-screen-xl mx-auto px-6 py-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 sm:gap-0">
       <div class="flex items-center gap-2 text-xs text-gray-500">
         <i data-lucide="tree-pine" class="w-4 h-4 text-green-700" aria-hidden="true"></i>
-        <span>グリーンエクステリア株式会社 営業部</span>
+        <span>Takezo Farm 営業部</span>
       </div>
       <div class="text-xs text-gray-400">
         自動生成: ${new Date().toLocaleString('ja-JP')}
