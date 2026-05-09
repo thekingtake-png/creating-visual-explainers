@@ -140,7 +140,7 @@ async function fetchFromSheets(spreadsheetId, credentialsJson) {
  */
 async function getData(isDryRun = false) {
   const spreadsheetId  = process.env.SPREADSHEET_ID;
-  const credentialsJson = process.env.GOOGLE_CREDENTIALS_JSON;
+  const credentialsJson = process.env.GOOGLE_CREDENTIALS_JSON || process.env.GOOGLE_SERVICE_ACCOUNT_JSON;
 
   if (isDryRun || !spreadsheetId || !credentialsJson) {
     console.log('ℹ️  ダミーデータを使用します（実運用時は環境変数を設定してください）');

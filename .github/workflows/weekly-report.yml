@@ -41,6 +41,7 @@ jobs:
         env:
           SPREADSHEET_ID:          ${{ secrets.SPREADSHEET_ID }}
           GOOGLE_CREDENTIALS_JSON: ${{ secrets.GOOGLE_CREDENTIALS_JSON }}
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
           LINE_CHANNEL_TOKEN:      ${{ secrets.LINE_CHANNEL_TOKEN }}
           LINE_USER_IDS:           ${{ secrets.LINE_USER_IDS }}
           REPORT_URL:              https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/output/weekly-report/
